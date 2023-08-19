@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    
+    min-height: 90vh;
+    background: rgb(194,103,6);
+    background: linear-gradient(90deg, rgba(194,103,6,1) 0%, rgba(15,106,4,1) 7%, rgba(66,32,89,1) 100%);
+}
+
+
+.menu{
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+   
+}
+
+
+.menu li{
+    position: absolute;
+    left: 0;
+    list-style: none;
+    transition: 0.5s;
+    transform-origin: 140px;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translateX(110px);
+}
+
+.menu li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    /*html sayfasında verilen renkler burada aktifleşti*/
+    color:  var(--clr);
+    border: 2px solid var(--clr);
+    border-radius: 50%;
+    font-size: 2em;
+    transform: rotate(calc(360deg / -10* var(--i)));
+    /*fare ile uzerine gelindiginde ve uzerinden uzaklasildiginda olusan renk degisimi icin hover kullandim. transition ile renk gecis
+    zamanini belirttim*/
+    transition: 1s;
+    
+}
+.menu li a:hover
+{
+    transition: 0s;
+    background: var(--clr);
+    color: #333;
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr),
+    0 0 50px var(--clr);
+}
+.menu .toggle
+{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #2f363e;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 2em;
+    transition: transform 1.25s;
+}
+
+.menu.active .toggle
+{
+/*yuvarlak kısmın dönmesi saglandi*/
+    transform: rotate(360deg);
+}
+
+.menu.active li{
+    /*10 degere gore konum belirlendi. acildiginda simgeler belirli oldu. */
+    transform: rotate(calc(360deg / 10*var(--i))) translateX(0px);
+}
+img{
+    width:50px; 
+    height:50px;
+    border-radius: 50%;
+}
+
+.anakutu {
+    width: 960px;
+    padding: 20px 20px;
+    margin: 40px auto;
+    }
+   .yataymenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background: #555555;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    
+   }
+   .yataymenu li {
+    float: left;
+    
+   }
+   .yataymenu li a {
+    display: block;
+    text-decoration: none;
+    padding: 14px 16px;
+    color: white;
+    font: bold 14px Century gothic;
+   }
+   .yataymenu li a:hover {
+    background: grey;
+    color:black;
+   }
+

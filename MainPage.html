@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AnaSayfa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="MainPage.css">
+</head>
+
+<body>
+    <div class="anakutu">
+ 
+        <ul class="yataymenu">
+        <li><a href="MainPage.html">Anasayfa</a></li>
+        <li><a href="https://wa.me/00000000/?text=Öneri ve şikayetlerinizi bildirebilirsiniz.">İletişim</a></li>
+        <li><a href="Hakkimizda.html">Biz Kimiz?</a></li>
+        
+        </ul>
+        
+       
+        </div>
+<ul class="menu">
+    
+    <!--Menunun ora tusu icin ikon ekleme -->
+    <div class="toggle"><img src="game.png"></div>
+    
+
+    <li style="--i:0;--clr:#fee800; ">
+        <a href="Adam_asmaca/adam_asmaca.html"><img src="img/adam_asmaca.png"></a>
+    </li>
+    <li style="--i:1;--clr:#04fc43; ">
+        <a href="ball_fall/fall.html"><img src="img/fall_ball.png"></a>
+    </li>
+    <li style="--i:2;--clr:#fe00f1; ">
+        <a href="piano/piano.html"><img src="img/piano/piano.png"></a></li>
+    <li style="--i:3;--clr:#00b0fe; ">
+        <a href="Tetris/tetris.html"><img src="img/renk_yakalama/renk_yakalama.png"></a></li>
+    <li style="--i:4;--clr:#fea600; ">
+        <a href="Flappy_Bird/Flappy_Bird.html"><img src="img/flip.jpg"></a></li>
+     <li style="--i:5;--clr:#dddd; ">
+        <a href="Run_game/run_game.html"><img src="img/Idle (1).png"></a></li>
+    <li style="--i:6;--clr:#dddd; ">
+        <a href="xox/xox.html"><img src="img/xox/xox.jpg"></a></li>
+
+    <li style="--i:7;--clr:#dddd; ">
+        <a href="paint/paint.html"><img src="img/paint.jpg"></a></li>
+    <li style="--i:8;--clr:#dddd; ">
+        <a href="kacis/kac.html"><img src="img/kacis.png"></a></li>
+        <li style="--i:9;--clr:#dddd; ">
+            <a href="kula_dikme_oyunu/kule.html"><img src="img/kule.jpg"></a></li>
+        
+    
+</ul>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    let toggle=document.querySelector('.toggle');
+    let menu = document.querySelector('.menu');
+    toggle.onclick=function(){
+        menu.classList.toggle('active')
+    }
+</script>
+</body>
+</html>

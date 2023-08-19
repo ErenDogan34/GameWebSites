@@ -1,0 +1,65 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+#game
+{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    
+}
+#karakter
+{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    top: 440px;
+    left: 190px;
+    z-index: 1000000;
+}
+.block
+{
+    width: 400px;
+    height: 20px;
+    background-color: black;
+    position: relative;
+    top: 100px;
+    /*topun yuzeye yapismasini saglayacak*/
+    margin-top: -20px;
+}
+.hole
+{
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    position: relative;
+    top: 100px;
+    margin-top: -20px;
+}
+
+#pop-up
+{
+    /*saydamlik verildi*/
+   background-color: rgba(0, 0, 0, 0.3);
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   display: none;
+   align-items: center;
+   justify-content: center;
+}
+.popup
+{
+    background-color: green;
+    padding: 20px;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0,0.1);
+}

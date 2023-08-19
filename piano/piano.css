@@ -1,0 +1,98 @@
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+.container
+{
+    display: flex;
+    position: relative;
+    margin-left: 4px;
+}
+
+.title
+{
+    margin-top: 20px;
+    position: absolute;
+    margin-bottom: 20em;
+    border: 1px solid black;
+    width: 500px;
+    font-size:30px;
+    height: 40px;
+    text-align: center;
+   
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff2d95, 0 0 30px #ff2d95, 0 0 40px #ff2d95, 0 0 50px #ff2d95, 0 0 75px #ff2d95;
+    
+}
+
+.white-key
+{
+    width: 40px;
+    height: 120px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 0 0 6px 6px;
+    margin-left: -4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.white-key.active
+{
+    background-color: #c0c0c0;
+}
+
+.black-key
+{
+    position: absolute;
+    width: 24px;
+    height: 80px;
+    background-image: linear-gradient(black,#303030);
+    border: 3px solid black;
+    border-radius: 0 0 2px 2px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.black-key.active
+{
+    background-image:  linear-gradient(#000000,#101010);
+}
+/*siyah renkli butonlarin konumlari ayarlaniyor.*/
+.keyb-1
+{
+    left: 22px;
+}
+.keyb-2
+{
+    left: 58px;
+}
+.keyb-3
+{
+    left: 130px;
+}
+.keyb-4
+{
+    left: 166px;
+}
+.keyb-5
+{
+    left: 202px;
+}
+.keyb-6
+{
+    left: 274px;
+}
+.keyb-7
+{
+    left: 310px;
+}

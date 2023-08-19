@@ -1,0 +1,75 @@
+:root
+{
+    --width: 400px ;
+}
+/*ekran ozelliklerini sifirladim.*/
+*
+{
+    margin: 0;
+    padding: 0;
+}
+#oyun
+{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border: 1px solid black;
+    visibility: visible;
+}
+#button
+{
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: 2px solid black;
+    border-radius: 20%;
+    margin: 1rem auto;
+    display: block;
+    background-color: lightgreen;
+}
+/*basinca renk degisecek*/
+#button:active
+{
+    background-color:crimson;
+}
+/*uzerine gelince renk degisecek*/
+#button:hover
+{
+    background-color: chartreuse;
+}
+.slider
+{
+    visibility: hidden;
+    height: 20px;
+    width: 100px;
+    background-color: red;
+    position: relative;
+}
+/*js kisminda dongu icinde olusacak.*/
+#slider1
+{
+    visibility: visible;
+}
+.animate
+{
+    animation: slide 4s infinite linear ;
+    
+}
+/*keyfremes animasyonun hangi noktalarda gerceklesecegini gosterir. iki nokta arasinda gerceklesir. */
+@keyframes slide
+{
+    /*baslangic noktasi*/
+    0%
+    {
+        left: 0px;
+    }
+    /*baslar ve sonda son bulur*/
+    50%
+    {
+        left: var(--width);
+    }
+    /*devamli bir animasyon olusur. sona gelince geri doner.*/
+    100%
+    {
+        left: 0px;
+    }
+}

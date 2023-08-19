@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color:cadetblue;
+    color: white;
+    height: 80vh;
+    display: flex;
+    /*elemanlar alt alta gelecek.*/
+    flex-direction: column;
+    align-items: center;
+    /*kaydirma cubugu cikmayacak.*/
+    overflow: hidden;
+}
+.container
+{
+    padding: 20px 20px;
+    height: 450px;
+    width: 450px;
+    position: relative;
+}
+.alan 
+{
+    /*transparan bir goruntu*/
+    fill: transparent;
+    /*cizgimiz 4px kalinliginda ve beyaz olacak.*/
+    stroke: white;
+    stroke-width: 4px;
+}
+.iskelet
+{
+    display: none;
+}
+#yanlis
+{
+    /*relative nesneye gore konumlanma yapilir bizim relative nesnemiz containerdir.
+    container nesnesine gore konum alir.
+    */
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+#kelime
+{
+    /*yanyana konumlanma*/
+    display: flex;
+    position: absolute;
+    bottom: 50px;
+    /*kelimeyi ortaladim*/
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+#pop-up
+{
+    /*saydamlik verildi*/
+   background-color: rgba(0, 0, 0, 0.3);
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   display: none;
+   align-items: center;
+   justify-content: center;
+}
+.popup
+{
+    background-color: green;
+    padding: 20px;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0,0.1);
+}
+.letter
+{
+    /*altini cizer.*/
+    border-bottom: 3px solid yellow ;
+    font-size: 25px;
+    margin: 0 4px;
+    height: 40px;
+    width: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#message
+{
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 15px;
+    border-radius: 4px;
+    padding: 10px 80px;
+    position: absolute;
+    bottom: -80px;
+    transition: transform 0.4s ease-in-out;
+}
+/*javascript kisminda class vererek goruntu ortaya cikarilacak.*/
+#message.message_show
+{
+    transform: translateY(-80px);
+}

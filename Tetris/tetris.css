@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    min-height: 100vh;
+    background: black;
+    /*Yazi renkleri icin*/
+    color: aqua;
+    cursor:none;
+}
+
+.board
+{
+    /*konumunda oynama yapabilmek icin*/
+    position: absolute;
+    width: 400px;
+    height: 80vh;
+    /*kutumu ekrana gore ortaladim*/
+    top: 50%;
+    left: 50%;
+    /*Score ve next alanlarini kutunun icindeki konumuna goere yukariya ve sola yasladim.*/
+    transform: translate(-50%,-50%);
+    border: 2px solid white;
+    /*hareket ederken raket board ekranindan tasmamasi icin*/
+    overflow: hidden;
+}
+
+.next
+{
+    position: absolute;
+    /*yanyana gelecek*/
+    display: flex;
+    /*Bilgi  yukarida olacak asagida renk olacak*/
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /*sag tarafa aldim*/
+    top: 1%;
+    right: 1%;
+    font-size: 1.3rem;
+
+}
+
+/*renk kutusu olacak*/
+.next p{
+    width: 50px;
+    height: 25px;
+    border: 1px solid white;
+}
+
+.score
+{
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    /*yanyana gelecek*/
+    display: flex;
+    /*rakamla skor yazisi yapisik olmaması*/
+    justify-content: space-between;
+    width: 120px;
+    font-size: 1.3rem;
+}
+
+.racket
+{
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100px;
+    height: 20px;
+    background: white;
+}
+/*js ile kare olusturacagim. karede rastgele renkler olacak*/
+.square
+{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: 1px solid white;
+    /*-1 verdim cunku raketimizin onuna dusmesini engellemek icin. arkasina dusecek.*/
+    z-index: -1;
+}
